@@ -12,4 +12,12 @@ router.get("/app", (req, res) => {
   });
 });
 
+router.get("/git/commit", (req, res) => {
+  res.sendStatus(200).send("X-encoded-commit: 1234567890abcdef");
+});
+
+router.post("/git/commit", (req, res) => {
+  res.sendStatus(200).send("Post commit received");
+});
+
 module.exports = router;
